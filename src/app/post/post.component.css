@@ -1,0 +1,20 @@
+paper-card {
+    margin: 15px;
+    font-size: 12px;
+    --paper-card-header-text: {
+        font-size: 12px;
+        color: white;
+    }
+}
+
+.pointer-click {
+    pointer-events: auto !important;
+}
+
+/*paper-fab {
+    --paper-fab-background: var(--paper-grey-50);
+    display:inline-block;
+}
+paper-fab  {
+    color: var(--paper-grey-500);
+}*/

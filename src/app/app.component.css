@@ -1,0 +1,72 @@
+app-header {
+  background-color: white;
+  color: var(--paper-grey-500);
+  border-bottom-color: var(--paper-grey-200);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  --app-header-background-rear-layer: {
+    /* The header is blue when condensed */
+    background-color: blue;
+  };
+  --app-header-shadow: {
+    box-shadow: inset 0px 5px 2px -3px rgba(0, 0, 0, 0.2);
+  };
+  
+}
+
+paper-badge {
+    --paper-badge-width: 15px;
+    --paper-badge-height: 15px;
+    --paper-badge-margin-left: -5px;
+    --paper-badge-margin-bottom: -5px;
+}
+
+paper-input.search {
+    --paper-input-prefix: {
+        top: -7px;
+        height: 30px;
+        background-color: var(--paper-grey-300);
+        padding: 5px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    --paper-input-suffix: {
+        top: -7px;
+        height: 30px;
+        background-color: var(--paper-grey-300);
+        padding: 5px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    --paper-input-container-input: {
+        top: -7px;
+        height: 30px;
+        background-color: var(--paper-grey-300);
+        padding: 5px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        font-weight: bold;
+    }
+    --paper-input-container-color: none;
+    --paper-input-container-focus-color: none;
+    --paper-input-container-input-color: var(--paper-grey-800);
+}
+
+.click {
+    pointer-events: auto;
+    border: none;
+}
+
+paper-icon-button.refresh {
+  background: var(--paper-grey-200);
+  color: var(--paper-grey-500);
+  font-weight: bold;
+  border-radius: 25px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+paper-icon-button.logo {
+  background: #f9c45b;
+  border-radius: 15px;
+}

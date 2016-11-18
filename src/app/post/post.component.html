@@ -1,0 +1,77 @@
+<style is="custom-style">
+  .cafe-header {}
+  
+  paper-button {
+    display: inline-block;
+    font-size: 10px;
+  }
+  
+  .crop-button {
+    --iron-icon-width: 12px;
+    --iron-icon-height: 12px;
+  }
+  
+  .cafe-light {
+    color: var(--paper-grey-600);
+  }
+  
+  .cafe-location {
+    position: absolute;
+    left: 75%;
+    top: 5px;
+  }
+  
+  .post-text {
+  }
+  
+  .cafe-reserve {
+    color: var(--google-blue-500);
+  }
+  
+  iron-icon {
+    --iron-icon-width: 12px;
+    --iron-icon-height: 12px;
+  }
+  
+  iron-icon.star:last-of-type {
+    color: var(--paper-grey-500);
+  }
+  
+  .center-container {
+    @apply(--layout-horizontal);
+    @apply(--layout-justified);
+  }
+  
+  paper-button {
+    background-color: var(--paper-grey-50);
+  }
+</style>
+<paper-card #cropImage image={{post.postImage}} alt="Donuts" heading="{{post.postedOn | date: 'dd/MM/yyyy'}}" >
+  <div class="card-content">
+    <div class="cafe-header">{{post.profileName}}
+      <div class="cafe-location">
+        <!--<paper-icon-button icon="image:crop" title="Crop" class="crop-button"></paper-icon-button>-->
+        <paper-button>
+          <iron-icon icon="image:crop"></iron-icon>Crop</paper-button>
+      </div>
+    </div>
+    <p class="post-text">{{post.postText}}</p>
+    <!--<div class="cafe-light">
+      <span></span>
+    </div>-->
+    <div class="cafe-light">
+      <paper-button style="padding: 5px">
+        <iron-icon icon="maps:local-offer"></iron-icon>2-3 PM</paper-button>
+      <paper-button>
+        <iron-icon icon="maps:local-offer"></iron-icon>Chennai</paper-button>
+    </div>
+  </div>
+  <div class="card-actions">
+    <div class="center-container">
+      <paper-button>
+        <iron-icon icon="check"></iron-icon>Accept</paper-button>
+      <paper-button>
+        <iron-icon icon="clear"></iron-icon>Reject</paper-button>
+    </div>
+  </div>
+</paper-card>

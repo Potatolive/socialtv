@@ -5,11 +5,15 @@ import { HttpModule } from '@angular/http';
 import { PolymerElement } from '@vaadin/angular2-polymer';
 
 import { AppComponent } from './app.component';
+import { PostComponent } from './post/post.component';
+import { PostsComponent } from './posts/posts.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PolymerElement('paper-input')
+    PolymerElement('paper-input'),
+    PostComponent,
+    PostsComponent
   ],
   imports: [
     BrowserModule,

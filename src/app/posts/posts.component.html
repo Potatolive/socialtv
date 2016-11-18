@@ -1,0 +1,32 @@
+<style>
+  .rowcontainer {
+    @apply(--layout-horizontal);
+  }
+  
+  .columncontainer {
+    @apply(--layout-vertical);
+  }
+</style>
+
+<div class="rowcontainer">
+  <div class="columncontainer">
+    <div *ngFor="let post of posts;let i=index">
+      <app-post *ngIf="i % 4 === 0" [post]="post"></app-post>
+    </div>
+  </div>
+  <div class="columncontainer">
+    <div *ngFor="let post of posts;let i=index">
+      <app-post *ngIf="i % 4 === 1" [post]="post"></app-post>
+    </div>
+  </div>
+  <div class="columncontainer">
+    <div *ngFor="let post of posts;let i=index">
+      <app-post *ngIf="i % 4 === 2" [post]="post"></app-post>
+    </div>
+  </div>
+  <div class="columncontainer">
+    <div *ngFor="let post of posts;let i=index">
+      <app-post *ngIf="i % 4 === 3" [post]="post"></app-post>
+    </div>
+  </div>
+</div>
