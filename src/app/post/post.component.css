@@ -1,11 +1,27 @@
 paper-card {
+    display:block;
     margin: 15px;
     font-size: 12px;
     --paper-card-header-text: {
         font-size: 12px;
         color: white;
-    }
+    };
+    --paper-card-header-image:{
+        object-fit: scale-down;
+    };
 }
+
+/*paper-card {
+    display:block;
+}
+
+img {
+    display: block;
+    object-fit: scale-down;
+    width: 100%;
+    height: auto;
+}*/
+
 
 .pointer-click {
     pointer-events: auto !important;

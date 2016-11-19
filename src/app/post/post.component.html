@@ -46,19 +46,15 @@
     background-color: var(--paper-grey-50);
   }
 </style>
-<paper-card #cropImage image={{post.postImage}} alt="Donuts" heading="{{post.postedOn}}" >
+<paper-card #cropImage (mouseenter)="setupCrop()" image={{post.postImage}} alt="Donuts" heading="{{post.postedOn}}" >
   <div class="card-content">
     <div class="cafe-header">{{post.profileName}}
       <div class="cafe-location">
-        <!--<paper-icon-button icon="image:crop" title="Crop" class="crop-button"></paper-icon-button>-->
         <paper-button>
           <iron-icon icon="image:crop"></iron-icon>Crop</paper-button>
       </div>
     </div>
     <p class="post-text">{{post.postText}}</p>
-    <!--<div class="cafe-light">
-      <span></span>
-    </div>-->
     <div class="cafe-light">
       <paper-button style="padding: 5px">
         <iron-icon icon="maps:local-offer"></iron-icon>2-3 PM</paper-button>
@@ -75,3 +71,8 @@
     </div>
   </div>
 </paper-card>
+<!--<paper-card  alt="Donuts" heading="{{post.postedOn}}" >
+  <div class="card-content">
+    <img #cropImage src={{post.postImage}}>
+    </div>
+</paper-card>-->

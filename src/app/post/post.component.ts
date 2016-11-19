@@ -23,10 +23,21 @@ export class PostComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
+
+    $(this.cropImage.nativeElement).find('iron-image').css('pointer-events', 'auto');
+
+    // console.log($(this.cropImage.nativeElement).find('img'));
+
+  }
+
+  setupCrop() {
+    
+    // console.log($(this.cropImage.nativeElement).find('img').width);
+
     $(this.cropImage.nativeElement).find('img').Jcrop({
       onChange: this.showCoords,
-      onSelect: this.showCoords
+      onSelect: this.showCoords,
+      aspectRatio: 1
     });
-    $(this.cropImage.nativeElement).find('iron-image').css('pointer-events', 'auto');
   }
 }
