@@ -12,6 +12,7 @@ export class PostComponent implements OnInit, AfterViewInit {
   @Input() post: Post;
   @ViewChild('cropImage') cropImage: ElementRef;
   cropCoordinates: any;
+  isCropSetup: boolean = false;
 
   constructor() { }
 
@@ -23,21 +24,19 @@ export class PostComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-
     $(this.cropImage.nativeElement).find('iron-image').css('pointer-events', 'auto');
-
-    // console.log($(this.cropImage.nativeElement).find('img'));
-
   }
 
   setupCrop() {
-    
-    // console.log($(this.cropImage.nativeElement).find('img').width);
+
+    if(this.isCropSetup) return;
 
     $(this.cropImage.nativeElement).find('img').Jcrop({
       onChange: this.showCoords,
       onSelect: this.showCoords,
       aspectRatio: 1
     });
+
+    this.isCropSetup = true;
   }
 }
