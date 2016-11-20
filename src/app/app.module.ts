@@ -7,13 +7,15 @@ import { PolymerElement } from '@vaadin/angular2-polymer';
 import { AppComponent } from './app.component';
 import { PostComponent } from './post/post.component';
 import { PostsComponent } from './posts/posts.component';
+import { TagsComponent } from './tags/tags.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PolymerElement('paper-input'),
     PostComponent,
-    PostsComponent
+    PostsComponent,
+    TagsComponent
   ],
   imports: [
     BrowserModule,

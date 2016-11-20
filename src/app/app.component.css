@@ -57,6 +57,11 @@ paper-input.search {
     border: none;
 }
 
+
+paper-icon-button.refresh:hover {
+    color: var(--paper-grey-800);
+}
+
 paper-icon-button.refresh {
   background: var(--paper-grey-200);
   color: var(--paper-grey-500);
@@ -64,9 +69,35 @@ paper-icon-button.refresh {
   border-radius: 25px;
   margin-left: 5px;
   margin-right: 5px;
+  --paper-icon-button-hover: {
+      color: red;
+  };
 }
 
 paper-icon-button.logo {
   background: #f9c45b;
   border-radius: 15px;
+}
+
+.filter-form {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+paper-button.tag {
+    --paper-button: {
+        font-size: 12px;
+    }
+}
+
+paper-button.tag > iron-icon {
+    --iron-icon-width: 12px;
+    --iron-icon-height: 12px;
+    margin: 5px;
+}
+
+paper-header-panel {
+    --paper-header-panel-standard-container: {
+        background-color: white;
+    }
 }

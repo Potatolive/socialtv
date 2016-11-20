@@ -1,35 +1,73 @@
-<app-header-layout>
-    <!--<app-header style="height: 200px;" condenses fixed>
-        <app-toolbar style="height: 64px;">
-            <div main-title>App name</div>
-        </app-toolbar>
-        <app-toolbar style="height: 64px;">
-            <div main-title>App name</div>
-        </app-toolbar>
-    </app-header>-->
-    <app-header fixed>
-        <!--<app-toolbar>
-            <paper-icon-button icon="menu" drawer-toggle></paper-icon-button>
-            <div class="main-title">
-                <img src="http://potatolive.com/assets/img/potatolive.png" alt="PotatoLive" style="padding-left: 25px; padding-right: 50px; height: 45px;">
-            </div>
-            <paper-icon-button icon="info" style="float: right"></paper-icon-button>
-        </app-toolbar>-->
+<style is="custom-style">
+  paper-button.custom {
+    --paper-button-ink-color: var(--paper-pink-a200);
+    /* These could also be individually defined for each of the
+      specific css classes, but we'll just do it once as an example */
+    --paper-button-flat-keyboard-focus: {
+      background-color: var(--paper-pink-a200);
+      color: white !important;
+    };
+    --paper-button-raised-keyboard-focus: {
+      background-color: var(--paper-pink-a200) !important;
+      color: white !important;
+    };
+  }
+  paper-button.custom:hover {
+    background-color: var(--paper-grey-300);
+  }
+  paper-button.indigo {
+    background-color: var(--paper-grey-500);
+    color: white;
+    --paper-button-raised-keyboard-focus: {
+      background-color: var(--paper-pink-a200) !important;
+      color: white !important;
+    };
+  }
+  paper-button.disabled {
+    color: white;
+  }
+  .filterbutton {
+      @apply(--layout-horizontal);
+    @apply(--layout-end-justified);
+    margin-top: 20px;
+  }
+</style>
+<app-drawer-layout fullbleed force-narrow>
+    <app-drawer align="end" #filterPanel style="text-align: left">
         <app-toolbar>
-            <paper-icon-button class="logo" title="Potatolive" src="http://potatolive.com/assets/img/icon/apple-icon-152x152.png"></paper-icon-button>
-            <div main-title class="click">
-                <!--<img src="http://potatolive.com/assets/img/potatolive.png" alt="PotatoLive" style="padding-left: 25px; padding-right: 50px; height: 45px;">-->
-                <paper-input class="search" style="padding-left: 20px; padding-right:20px;" placeholder="search">
-                    <iron-icon icon="search" prefix></iron-icon>
-                    <iron-icon icon="clear" suffix></iron-icon>
-                </paper-input>
+            <div main-title>
+                Filter posts
             </div>
-            <paper-icon-button class="refresh" id="number" icon="refresh" alt="inbox">
-            </paper-icon-button>
-            <paper-badge for="number" label="51"></paper-badge>
-            <paper-icon-button class="refresh" icon="filter-list">
-            </paper-icon-button>
+            <paper-icon-button icon="chevron-right" drawer-toggle></paper-icon-button>
         </app-toolbar>
-    </app-header>
-    <app-posts></app-posts>
-</app-header-layout>
+        <div class="filter-form">
+            <vaadin-combo-box class="programs" [items]="programs" label="Program"></vaadin-combo-box>
+            <vaadin-date-picker label="Published On" initial-position="2016-02-01"></vaadin-date-picker>
+            <app-tags></app-tags>
+            <div class="filterbutton">
+            <paper-button raised class="custom indigo" drawer-toggle>Filter</paper-button>
+            </div>
+        </div>
+    </app-drawer>
+    <div>
+        <app-header-layout>
+            <app-header fixed>
+                <app-toolbar>
+                    <paper-icon-button class="logo" title="Potatolive" src="http://potatolive.com/assets/img/icon/apple-icon-152x152.png"></paper-icon-button>
+                    <div main-title class="click">
+                        <paper-input class="search" style="padding-left: 20px; padding-right:20px;" placeholder="search">
+                            <iron-icon icon="search" prefix></iron-icon>
+                            <iron-icon icon="clear" suffix></iron-icon>
+                        </paper-input>
+                    </div>
+                    <paper-icon-button class="refresh" title="Refresh to see new posts" id="number" icon="refresh" alt="inbox">
+                    </paper-icon-button>
+                    <paper-badge for="number" label="51"></paper-badge>
+                    <paper-icon-button class="refresh" icon="filter-list" title="Filter posts" drawer-toggle>
+                    </paper-icon-button>
+                </app-toolbar>
+            </app-header>
+            <app-posts></app-posts>
+        </app-header-layout>
+    </div>
+</app-drawer-layout>

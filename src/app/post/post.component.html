@@ -46,7 +46,7 @@
     background-color: var(--paper-grey-50);
   }
 </style>
-<paper-card #cropImage (mouseenter)="setupCrop()" image={{post.postImage}} alt="Donuts" heading="{{post.postedOn}}" >
+<paper-card #cropImage (mouseenter)="setupCrop()" image={{post.postImage}} alt="Donuts" heading="{{post.postedOn | date: 'dd MMM, yyyy'  }}" >
   <div class="card-content">
     <div class="cafe-header">{{post.profileName}}
       <div class="cafe-location">
@@ -71,8 +71,3 @@
     </div>
   </div>
 </paper-card>
-<!--<paper-card  alt="Donuts" heading="{{post.postedOn}}" >
-  <div class="card-content">
-    <img #cropImage src={{post.postImage}}>
-    </div>
-</paper-card>-->

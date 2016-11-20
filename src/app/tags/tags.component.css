@@ -1,0 +1,75 @@
+paper-button.custom {
+    --paper-button-ink-color: var(--paper-pink-a200);
+    /* These could also be individually defined for each of the
+      specific css classes, but we'll just do it once as an example */
+    --paper-button-flat-keyboard-focus: {
+      background-color: var(--paper-pink-a200);
+      color: white !important;
+    };
+    --paper-button-raised-keyboard-focus: {
+      background-color: var(--paper-pink-a200) !important;
+      color: white !important;
+    };
+  }
+  paper-button.custom:hover {
+    background-color: var(--paper-indigo-100);
+  }
+  paper-button.pink {
+    color: var(--paper-pink-a200);
+
+  }
+  paper-button.indigo {
+    background-color: var(--paper-indigo-500);
+    color: white;
+    --paper-button-raised-keyboard-focus: {
+      background-color: var(--paper-pink-a200) !important;
+      color: white !important;
+    };
+  }
+  paper-button.green {
+    background-color: var(--paper-grey-300);
+    color: black;
+  }
+  paper-button.green[active] {
+    background-color: var(--paper-green-300);
+  }
+  paper-button.disabled {
+    color: white;
+  }
+
+paper-button {
+    display: inline-block;
+    font-size: 10px;
+    background-color: var(--paper-grey-50);
+    margin: 3px;
+}
+
+.cafe-light {
+    color: var(--paper-grey-600);
+    border: solid 1px;
+    border-color: var(--paper-grey-100);
+}
+
+iron-icon {
+    --iron-icon-width: 12px;
+    --iron-icon-height: 12px;
+    margin: 3px;
+}
+
+paper-item {
+    --paper-item-selected: {
+        background-color: var(--paper-bluegrey-50);
+    };
+}
+
+paper-listbox {
+    border: solid 1px;
+    border-color: var(--paper-grey-100);
+}
+
+.tag-heading {
+    margin-top: 10px;
+    pointer-events: none;
+    background-color: var(--paper-grey-200);
+}
+
