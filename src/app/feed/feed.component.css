@@ -1,0 +1,32 @@
+/*paper-button {
+    @apply(--layout-vertical);
+    @apply(--layout-center);
+}*/
+
+paper-material {
+    max-width: 200px;
+    padding: 5px;
+}
+
+paper-card {
+    padding: 5px;
+    margin: 5px;
+    max-width: 275px;
+}
+
+/*.card-content paper-button {
+    @apply(--layout-vertical);
+    @apply(--layout-center);
+}*/
+
+.cafe-header { 
+    text-transform: capitalize;
+    @apply(--paper-font-headline); 
+}
+
+iron-image {
+    max-height: 170px;
+    max-width: 250px;
+}
+
+
